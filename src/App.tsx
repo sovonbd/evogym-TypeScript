@@ -1,7 +1,10 @@
+import Navbar from "@/scenes/navbar";
+
 function App() {
   return (
     <>
-      <div className="text-red-400">app</div>
+      <div className=" bg-gray-20">app</div>
+      <Navbar></Navbar>
     </>
   );
 }

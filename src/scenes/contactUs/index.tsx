@@ -103,8 +103,8 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               <textarea
                 className={inputStyles}
                 placeholder="MESSAGE"
-                rows={4}
-                cols={50}
+                rows={18}
+                cols={10}
                 {...register("message", {
                   required: true,
                   maxLength: 2000,

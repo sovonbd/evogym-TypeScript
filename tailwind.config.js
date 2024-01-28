@@ -29,9 +29,6 @@ export default {
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/circles.png')",
       },
-      textSize: {
-        
-      }
     },
     screens: {
       xs: "480px",

@@ -1,4 +1,4 @@
-#EVOGYM
+# EVOGYM
 
 Check out the live demo of EVOGYM: [EVOGYM Live Demo](https://evogym-typescript-4zp.pages.dev/)
 

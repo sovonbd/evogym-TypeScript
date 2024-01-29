@@ -3,30 +3,21 @@ import Logo from "@/assets/Logo.png";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ActionButton from "@/shared/ActionButton";
 
 type Props = {
+  isTopOfPage: boolean;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
-  const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
 
-  useEffect(() => {
-    if (window.scrollY === 0) {
-      setIsTopOfPage(true);
-      setSelectedPage(selectedPage);
-    }
-    if (window.scrollY !== 0) {
-      setIsTopOfPage(false);
-    }
-  }, [setSelectedPage, selectedPage]);
   return (
     <nav>
       <div
